@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("imagenes/1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.transiciones{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 10px;
+    box-shadow: 20px 20px 30px red;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-property: all;
+}
+.transiciones:hover{
+    background-color: chartreuse;
+    box-shadow: 20px 20px 30px brown;
+    width: 300px;
+    height: 300px;
+}
+
+.transformaciones{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transformaciones img{
+    width: 30%;
+}
+.transformaciones img:hover{
+    cursor: pointer;
+   /* transform: rotate(60deg);*/
+    transform: scale(1.5);
+   /* transform: skewy(20deg);
+    transform: translate(150px, 100px) rotate(25deg);*/
+    filter: sepia();
+    border-radius: 50%;
+transition-duration: 2s;
+    
+}
+
+.animacion{ 
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.animar1{
+    background-color: crimson;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: primera;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+    animation-timing-function:linear ;
+    
+}
+@keyframes primera{
+    0%
+    {
+        background-color: brown;
+        left: 0;
+        top: 0;
+    }
+
+    70%{
+        background-color: blue;
+        left: 600px;
+        /*bottom: 200px;*/
+        width: 250px;
+        height: 250px;
+
+    }
+
+
+    100%{
+        background-color: aqua;
+        left: 900px;
+        width: 300px;
+        height: 300px;
+        
+    }
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circulo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid red;
+    border-top: 4px solid yellow;
+    animation: segunda 4s linear infinite;
+
+}
+.circulo2{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid sandybrown;
+    border-top: 4px solid violet;
+    animation: segunda 2s linear infinite;
+}
+@keyframes segunda{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
